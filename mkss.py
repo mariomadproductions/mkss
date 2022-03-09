@@ -13,7 +13,9 @@ def main():
         print('Invalid number of arguments')
 
     shebang_dict = {"sh": "#!/usr/bin/env bash",
-                    "py": "#!/usr/bin/env python3"}
+                    "py": "#!/usr/bin/env python3\n\ndef main():\n\tpass\n\n"\
+                          "if __name__ == '__main__':\nmain()"
+                    }
 
     with open(destfile_path,'x') as destfile:
         destfile.write("{}\n\n".format(shebang_dict[filetype]))
