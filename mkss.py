@@ -5,10 +5,11 @@ import os
 TEMPLATE_DICT = {"sh": "#!/usr/bin/env bash\n",
                  "py": "#!/usr/bin/env python3\n"\
                        "import argparse\n\n"\
-                       "def main():\n    "\
-                       "parser = argparse.ArgumentParser()\n    "\
-                       "args = parser.parse_args()"\
-                       "\n\nif __name__ == '__main__':\n    main()\n"}
+                       "def main():\n"\
+                       "    parser = argparse.ArgumentParser()\n"\
+                       "    parser.add_argument('example')\n"\
+                       "    args = parser.parse_args()\n"\
+                       "\nif __name__ == '__main__':\n    main()\n"}
 
 FILE_TYPES = list(TEMPLATE_DICT.keys())
 
