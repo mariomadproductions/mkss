@@ -9,14 +9,11 @@ def make_executable(path):
     os.chmod(path, mode)
 
 def mkss(file_path,file_type,template_dict):
-
     with open(file_path, 'x') as file:
         file.write(template_dict[file_type])
-
     make_executable(file_path)
 
 def main():
-    
     template_dict = {"sh": "#!/usr/bin/env bash\n",
                      "py": "#!/usr/bin/env python3\n"\
                      "import argparse\n\n"\
